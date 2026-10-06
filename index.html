@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>six seven</title>
+    <!-- Font Awesome CDN cho Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- F12 SOURCE CODE OVERLAY -->
+    <div id="f12-overlay">
+        <div class="f12-header">
+            <div class="f12-title font-racing">[SYSTEM OVERRIDE] // FULL SOURCE CODE DETECTED</div>
+            <button class="f12-close-btn" onclick="closeF12Overlay()">[ CLOSE TERMINAL ]</button>
+        </div>
+        <div class="f12-code-container">
+            <pre id="source-code-display">// Fetching raw source code...</pre>
+        </div>
+    </div>
+
+    <!-- SCI-FI SPLIT DOOR PRELOADER -->
+    <div id="loader">
+        <div class="door door-left"></div>
+        <div class="door door-right"></div>
+        <div class="loader-content">
+            <div class="loader-title font-racing">LOADING</div>
+            <div class="loader-counter font-racing" id="loader-text">00%</div>
+            <div class="loader-bar-bg">
+                <div class="loader-bar-fill" id="loader-bar"></div>
+            </div>
+            <div class="loader-sub font-racing">six seven</div>
+        </div>
+    </div>
+
+    <div class="cyber-bg"></div>
+    <div class="cyber-grid"></div>
+    <div class="scanlines"></div>
+
+    <canvas id="canvas-particles"></canvas>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <nav>
+        <!-- WORK IN PROGRESS BANNER TÍCH HỢP TRONG TOPBAR -->
+        <div class="wip-banner">
+            <div class="wip-content font-racing">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>Work in progress - May have some issues</span>
+                <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+        </div>
+
+        <div class="logo font-racing">36 // 67</div>
+        
+        <div class="nav-links" id="nav-links">
+            <a href="#home"><i class="fa-solid fa-house"></i> HOME</a>
+            <a href="#work"><i class="fa-solid fa-code"></i> WORK</a>
+            <a href="#stats"><i class="fa-solid fa-chart-simple"></i> STATS</a>
+        </div>
+
+        <div class="nav-actions">
+            <!-- Nút Toggle Chế độ Sáng/Tối hỗ trợ trượt trái sang phải -->
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <div class="theme-btn-content">
+                    <i id="theme-icon" class="fa-solid fa-sun"></i>
+                    <span id="theme-btn-text">LIGHT</span>
+                </div>
+            </button>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="home">
+        <div class="bg-big-text font-racing reveal">36/67</div>
+        <h1 class="font-racing reveal">THAI <br> <span class="neon-text">QUOC BAO</span></h1>
+        <p class="reveal">a larper</p>
+    </section>
+
+    <section id="work" class="work">
+        <h2 class="section-title font-racing reveal">Posts</h2>
+        <div class="grid-container">
+            <!-- Card 01 -->
+            <div class="card reveal" data-tilt>
+                <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+                <span class="card-num">// 01</span>
+                <div class="card-content">
+                    <h3 class="font-racing">PROFILE</h3>
+                    <p>My GitHub Profile</p>
+                </div>
+                <!-- Thêm nút View on GitHub -->
+                <div class="card-footer">
+                    <a href="https://github.com/NoobieF1/" target="_blank" rel="noopener noreferrer" class="github-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 02 (Website này) -->
+            <div class="card reveal" data-tilt>
+                <div class="hud-corner tl"></div><div class="hud-corner tr"></div>
+                <div class="hud-corner bl"></div><div class="hud-corner br"></div>
+                <span class="card-num">// 02</span>
+                <div class="card-content">
+                    <h3 class="font-racing">This website</h3>
+                    <p>My personal portfolio repository</p>
+                </div>
+                <div class="card-footer">
+                    <a href="https://github.com/NoobieF1/noobief1.github.io" target="_blank" rel="noopener noreferrer" class="github-btn">
+                        <i class="fa-brands fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="stats">
+        <div class="stats-container">
+            <div class="stat-item reveal">
+                <span class="stat-num font-racing" id="stat-apps" data-target="0">0</span>
+                <span class="stat-label font-racing">silly apps</span>
+            </div>
+
+            <div class="stat-item reveal">
+                <span class="stat-num font-racing" style="color: var(--text-main);" id="stat-age" data-target="16">0</span>
+                <span class="stat-label font-racing">age</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="reveal">
+        <p>© 2026 Thai Quoc Bao — All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
